@@ -1,18 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
-import { AppComponent } from './app.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
+import {MyGridApplicationComponent} from './my-grid-application/my-grid-application.component';
+import {RedComponentComponent} from './red-component/red-component.component';
+import {AgGridModule} from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyGridApplicationComponent,
+    RedComponentComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    // FormsModule,
+    // HttpModule,
+    AgGridModule.withComponents(
+      [RedComponentComponent]
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

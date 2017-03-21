@@ -1,0 +1,13 @@
+<a (click)="feedGrid()">generate data</a>
+<div style="width: 1024px; margin-top: 30px">
+  <ag-grid-angular #agGrid style="width: 100%; height: 700px;" class="ag-fresh"
+                   enableColResize
+                   enableSorting
+                   rowHeight="22"
+                   rowSelection="multiple"
+                   [gridOptions]="gridOptions"
+                   [rowData]="rowData"
+                   [columnDefs]="columnDefs"
+  >
+  </ag-grid-angular>
+</div>
